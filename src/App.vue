@@ -1,60 +1,64 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+      <navbar/>
+      <div class="container">
+        <home/>
+      </div>
   </div>
+  <!-- end app -->
 </template>
 
 <script>
+import Navbar from "./components/Navbar"
+import Home from "./components/Home"
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  name: "app",
+  data() {
+    return {};
+  },
+  computed: {
+    sample: function() {
+      return this.$store.state.storeActive;
     }
+  },
+  methods: {},
+  components: {
+    Navbar,
+    Home
   }
-}
+};
 </script>
 
 <style>
+/*
+--------------------
+General global style
+--------------------
+*/
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Work Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
+  font-size: 16px;
+  color: #1c1d1e;
+  letter-spacing: -0.5px;
+  line-height: 24px;
 }
 
 a {
-  color: #42b983;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  font-size: 16px;
+  max-width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 30px;
 }
 </style>
