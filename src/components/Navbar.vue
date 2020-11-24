@@ -1,16 +1,15 @@
 <template>
   <div class="navbar">
-    <a class="logo" href="#">
-      <div class="logo-wrapper">
-        <img src="/dist/logo.svg" alt="logo" />
-      </div>
-    </a>
+    <router-link tag="a" class="logo" to="/"
+      ><div class="logo-wrapper">
+        <img src="/src/assets/logo.svg" alt="logo" /></div
+    ></router-link>
     <!-- end of logo -->
     <nav class="navbar-menu">
       <div class="navbar-menu-right">
-        <a title="Features" href="#">Features</a>
-        <a title="Use cases" href="#">Use cases</a>
-        <a title="Pricing" href="#">Pricing</a>
+        <router-link tag="a" to="/features">Features</router-link>
+        <router-link tag="a" to="/features">Use cases</router-link>
+        <router-link tag="a" to="/">Pricing</router-link>
         <a title="Get started" class="nav-btn" href="#">Get started free</a>
       </div>
     </nav>
@@ -22,11 +21,12 @@ export default {
   name: "navbar",
   data() {
     return {};
-  }
+  },
+  computed: {}
 };
 </script>
 
-<style>
+<style scoped>
 .navbar {
   height: 6rem;
   align-items: center;

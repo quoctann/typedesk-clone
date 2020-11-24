@@ -10,6 +10,6 @@ export const store = new Vuex.Store({
             {title: "Title", choice: [
                 {name: "name", link: "abc.xyz"}
             ] },
-            
+        ]
     }
 })

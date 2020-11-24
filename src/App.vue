@@ -2,15 +2,16 @@
   <div id="app">
       <navbar/>
       <div class="container">
-        <home/>
+        <router-view/>
       </div>
+    <Footer/>      
   </div>
   <!-- end app -->
 </template>
 
 <script>
 import Navbar from "./components/Navbar"
-import Home from "./components/Home"
+import Footer from "./components/Footer"
 export default {
   name: "app",
   data() {
@@ -24,7 +25,7 @@ export default {
   methods: {},
   components: {
     Navbar,
-    Home
+    Footer
   }
 };
 </script>
