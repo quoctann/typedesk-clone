@@ -36,6 +36,13 @@ export default {
 General global style
 --------------------
 */
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
 #app {
   font-family: "Work Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -61,5 +68,9 @@ body {
   margin: 0 auto;
   overflow: hidden;
   padding: 0 30px;
+}
+
+.center {
+  margin: 0 auto;
 }
 </style>

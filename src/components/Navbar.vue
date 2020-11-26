@@ -8,9 +8,14 @@
     <nav class="navbar-menu">
       <div class="navbar-menu-right">
         <router-link tag="a" to="/features">Features</router-link>
-        <router-link tag="a" to="/features">Use cases</router-link>
-        <router-link tag="a" to="/">Pricing</router-link>
-        <a title="Get started" class="nav-btn" href="#">Get started free</a>
+        <router-link tag="a" to="/usecases">Use cases</router-link>
+        <router-link tag="a" to="/pricing">Pricing</router-link>
+        <router-link 
+          tag="a"
+          to="/welcome"
+          class="nav-btn"
+          title="Get started"
+        >Get started free</router-link>
       </div>
     </nav>
   </div>
